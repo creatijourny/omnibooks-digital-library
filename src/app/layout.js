@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${poppins.variable} h-full antialiased`}    >
       <body className={`#{poppins.className} min-h-full flex flex-col`}>
         <Navbar />       
-        {children}
+        <main className="container mx-auto">{children}</main>
         <Footer />
         </body>
     </html>
