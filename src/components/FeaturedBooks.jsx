@@ -4,7 +4,7 @@ import BookCard from "./BookCard";
 const FeaturedBooks = async () => {
     const res = await fetch('https://omnibooks-digital-library.vercel.app/data.json');
     const books = await res.json();
-    const topBooks = books.slice(0, 4);
+    const topBooks = books.slice(4, 8);
     
     console.log(topBooks);
 
