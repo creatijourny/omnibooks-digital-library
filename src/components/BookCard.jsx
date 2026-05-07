@@ -1,23 +1,25 @@
+import { Chip } from "@heroui/react";
 import Image from "next/image";
 
 
 const BookCard = ({ book }) => {
-    const { id, title, author, image_url } = book;
+    const { id, title, author, image_url, category } = book;
     return (
-        <div className="flex flex-col justify-center items-center bg-base-100 border-gray-100">
-  <figure className="px-3 pt-2">
+        <div className="flex flex-col justify-center items-center bg-base-100 shadow relative">
+  <figure>
     <Image
       src={image_url}
       height={300}
-      width={260}
+      width={280}
       alt={title}
-      className="rounded" />
+      className="object-cover rounded" />
+      <Chip className="absolute right-12 top-3">{category}</Chip>
   </figure>
-  <div className="my-5 text-center">
+  <div className="my-2 text-center">
     <h3 className="text-xl font-semibold">{title}</h3>
     <p>{author}</p>
     <div>
-      <button className="btn rounded-full mt-2 w-full">Show Details</button>
+      <button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg">Show Details</button>
     </div>
   </div>
 </div>
