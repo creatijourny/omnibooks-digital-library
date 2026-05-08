@@ -1,7 +1,17 @@
+'use client';
+import { authClient } from '@/lib/auth-client';
+import { Avatar } from '@heroui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+
+    const handleSignOut = async () => {
+        await authClient.signOut();
+    }
     return (
         <div className="navbar bg-base-100 shadow px-5 flex justify-between">
 
@@ -28,14 +38,15 @@ const Navbar = () => {
                     <li><Link href={"/profile"}>My Profile</Link></li>
                 </ul>
             </div>
-            <div className="flex gap-2 text-sm justify-end">
-                <button className='bg-blue-500 hover:bg-blue-600 text-[#000000] p-2 rounded font-semibold'>
-                    <Link href={"/signin"}>Sign in</Link>
-                </button>
-                <button className='bg-[#f59e0b] text-black p-2 rounded'>
-                    <Link href={"/signup"}>Sign up</Link>
-                </button>
-                {/* <ul className="flex items-center text-sm gap-5">
+            <div>
+                {!user && <div className="flex gap-2 text-sm justify-end">
+                    <button className='bg-blue-500 hover:bg-blue-600 text-[#000000] p-2 rounded font-semibold'>
+                        <Link href={"/signin"}>Sign in</Link>
+                    </button>
+                    <button className='bg-[#f59e0b] text-black p-2 rounded'>
+                        <Link href={"/signup"}>Sign up</Link>
+                    </button>
+                    {/* <ul className="flex items-center text-sm gap-5">
                     <li>
                         <Link href={"/signup"}>Sign up</Link>
                     </li>
@@ -43,7 +54,23 @@ const Navbar = () => {
                         <Link href={"/signin"}>Sign in</Link>
                     </li>
                 </ul> */}
+                </div>}
+                {
+                    user && <div className='flex gap-2 items-center'>
+                        <Avatar size='sm'>
+                            <Avatar.Image 
+                            alt="John Doe" 
+                            src={user?.image} 
+                            referrerPolicy='no-referrer'/>
+                            <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                        </Avatar>
+                        <button onClick={handleSignOut} className="btn btn-warning rounded-md px-3">Sign out</button>
+
+
+                    </div>
+                }
             </div>
+
         </div>
     );
 };
