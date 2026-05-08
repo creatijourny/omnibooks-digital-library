@@ -56,12 +56,12 @@
   },
   {
     "id": 7,
-    "title": "The Lost Letters",
-    "author": "Jillian Cantor",
-    "description": "A touching narrative about rediscovered letters that change lives forever. A gorgeous and thrilling novel… ",
-    "category": "Story",    
-    "available_quantity": 22,
-    "image_url": "https://i.ibb.co.com/FqbpHzBm/lost-letter.jpg"
+    "title": "Blockchain Basics",
+    "author": " Daniel Drescher",
+    "description": "This book bridges the gap that exists between purely technical books about the blockchain and purely business-focused books. It does so by explaining both the technical concepts that make up the blockchain and their role in business-relevant applications.",
+    "category": "Tech",    
+    "available_quantity": 20,
+    "image_url": "https://i.ibb.co.com/ynN9btK0/blockchain.jpg"
   },
   {
     "id": 8,
@@ -92,12 +92,12 @@
   },
   {
     "id": 11,
-    "title": "Blockchain Basics",
-    "author": " Daniel Drescher",
-    "description": "This book bridges the gap that exists between purely technical books about the blockchain and purely business-focused books. It does so by explaining both the technical concepts that make up the blockchain and their role in business-relevant applications.",
-    "category": "Tech",    
-    "available_quantity": 20,
-    "image_url": "https://i.ibb.co.com/ynN9btK0/blockchain.jpg"
+    "title": "The Lost Letters",
+    "author": "Jillian Cantor",
+    "description": "A touching narrative about rediscovered letters that change lives forever. A gorgeous and thrilling novel… ",
+    "category": "Story",    
+    "available_quantity": 22,
+    "image_url": "https://i.ibb.co.com/FqbpHzBm/lost-letter.jpg"
   },
   {
     "id": 12,
@@ -108,4 +108,5 @@
     "available_quantity": 22,
     "image_url": "https://i.ibb.co.com/Wv3XVhCX/life-science.jpg"
   }
+  
 ]
