@@ -1,5 +1,6 @@
 import { Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const BookCard = ({ book }) => {
@@ -19,7 +20,8 @@ const BookCard = ({ book }) => {
     <h3 className="text-xl font-semibold">{title}</h3>
     <p>{author}</p>
     <div>
-      <button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg">Show Details</button>
+      <Link href={`/all-books/${book.id}`}>
+      <button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg">Show Details</button></Link>
     </div>
   </div>
 </div>
