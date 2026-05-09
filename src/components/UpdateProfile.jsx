@@ -18,9 +18,9 @@ export function UpdateUserProfile() {
       name,
       image
     })
-    if (!error) {
-            router.push('/')
-        }
+    // if (!error) {
+    //         router.push('/')
+    //     }
 
   }
   return (
