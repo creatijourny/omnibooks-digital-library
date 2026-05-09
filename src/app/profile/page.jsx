@@ -12,6 +12,7 @@ const ProfilePage = () => {
     // if(!user){
     //     redirect('/signin')
     // }
+    
     return (
         <div>
             <Card className="max-w-96 mx-auto min-h-[40vh] flex flex-col items-center my-8 border border-gray-200">

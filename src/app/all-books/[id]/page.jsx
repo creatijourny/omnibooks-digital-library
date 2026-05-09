@@ -6,7 +6,8 @@ const BookDetailsPage = async ({ params }) => {
     const res = await fetch('https://omnibooks-digital-library.vercel.app/data.json');
     const books = await res.json();
     const book = books.find(b => b.id == id)
-    console.log(book);
+    // console.log(book);
+    
     return (
         <div>
             <h3 className='text-2xl font-bold text-center'>Book Details</h3>
@@ -26,7 +27,7 @@ const BookDetailsPage = async ({ params }) => {
                     <p>Review: {book.description}</p>
                     <p className='text-lg font-bold'>Available quantity: {book.available_quantity}</p>
                     <button className="w-3/4 bg-orange-400 hover:bg-orange-500 text-black py-3 rounded-full text-lg font-semibold">Borrow this Book</button>
-
+                    
                 </div>
             </div>
          
