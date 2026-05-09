@@ -40,10 +40,10 @@ const Navbar = () => {
             </div>
             <div>
                 {!user && <div className="flex gap-2 text-sm justify-end">
-                    <button className='bg-blue-500 hover:bg-blue-600 text-[#000000] p-2 rounded font-semibold'>
+                    <button className='bg-sky-500 hover:bg-sky-600 text-[#000000] p-2 rounded font-semibold'>
                         <Link href={"/signin"}>Sign in</Link>
                     </button>
-                    <button className='bg-[#f59e0b] text-black p-2 rounded'>
+                    <button className='bg-orange-600 text-white p-2 rounded'>
                         <Link href={"/signup"}>Sign up</Link>
                     </button>
                     {/* <ul className="flex items-center text-sm gap-5">
@@ -57,12 +57,12 @@ const Navbar = () => {
                 </div>}
                 {
                     user && <div className='flex gap-2 items-center'>
-                        <Avatar size='sm'>
+                        <Avatar>
                             <Avatar.Image 
-                            alt="John Doe" 
+                            alt="User" 
                             src={user?.image} 
                             referrerPolicy='no-referrer'/>
-                            <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                            <Avatar.Fallback>{user?.name}</Avatar.Fallback>
                         </Avatar>
                         <button onClick={handleSignOut} className="btn btn-warning rounded-md px-3">Sign out</button>
 

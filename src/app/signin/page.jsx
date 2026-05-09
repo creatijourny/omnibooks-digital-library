@@ -97,7 +97,7 @@ export default function SignInPage() {
 
                 <div className="flex gap-2">
                     <button type='submit' className="w-full bg-[#f9a11b] hover:bg-[#f59e0b] text-black text-lg font-medium py-2 rounded-md cursor-pointer">Sign in</button>
-                    <button type='submit' className="w-42 bg-blue-500 hover:bg-blue-600 text-white text-lg font-medium py-2 rounded-md cursor-pointer">Reset</button>                    
+                    <input type="reset" value="Reset" className="btn rounded-md bg-blue-600 text-white" />                   
                 </div>
             </Form>
             <div className="flex flex-col items-center">
